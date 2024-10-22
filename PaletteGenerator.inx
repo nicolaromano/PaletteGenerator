@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+  <name>Palette Generator</name>
+  <id>net.nicolaromano.palettegenerator</id>
+  <param name="tab" type="notebook">
+    <page name="Options" gui-text="Options">
+      <param name="n_colors" type="int" gui-text="Number of colors" gui-min="1" gui-max="32"
+        gui-step="1">4</param>
+    </page>
+    <page name="Help" gui-text="Help">
+      <label xml:space="preserve">
+  This simple extension generates a series of swatches to use as a color palette.
+        </label>
+    </page>
+  </param>
+  <effect>
+    <effects-menu>
+      <submenu name="Color" />
+    </effects-menu>
+  </effect>
+  <script>
+    <command location="inx" interpreter="python">PaletteGenerator.py</command>
+  </script>
+</inkscape-extension>
