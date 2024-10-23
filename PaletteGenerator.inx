@@ -3,9 +3,23 @@
   <name>Palette Generator</name>
   <id>net.nicolaromano.palettegenerator</id>
   <param name="tab" type="notebook">
-    <page name="Options" gui-text="Options">
+    <page name="Options" gui-text="Options">     
+      <param name="shape" type="enum" gui-text="Shape" gui-label="Shape">
+        <item value="circle">Circle</item>
+        <item value="square">Square</item>
+      </param>
+      
+      <param name="size" type="float" gui-text="Size" gui-min="1" gui-max="100" gui-step="1">10</param>
+      <separator />
+      <param name="palette_type" type="optiongroup" appearance="combo" gui-text="Palette type">
+        <item value="mono">Monochromatic</item>
+        <item value="complement">Complementary</item>
+        <item value="triad">Triad (3 colors)</item>
+        <item value="tetrad">Tetrad (4 colors)</item>
+        <item value="random">Random</item>
+      </param>
       <param name="n_colors" type="int" gui-text="Number of colors" gui-min="1" gui-max="32"
-        gui-step="1">4</param>
+      gui-step="1" sensitive="palette_type" sensitive-value="random|mono">5</param>
     </page>
     <page name="Help" gui-text="Help">
       <label xml:space="preserve">
